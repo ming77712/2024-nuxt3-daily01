@@ -1,12 +1,26 @@
-<script setup lang="ts">
-const route = useRoute();
-</script>
+<script lang="ts" setup></script>
 
 <template>
+  <header>
+    <ul class="list">
+      <li>
+        <NuxtLink to="/">前台首頁</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/about">前台 About</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/admin">前往 後台首頁</NuxtLink>
+      </li>
+      <li>
+        <NuxtLink to="/admin/order">前往 後台訂單</NuxtLink>
+      </li>
+    </ul>
+  </header>
   <h1>
-    Page: 首頁
+    前台首頁
   </h1>
-  <p>目前路由的路徑 - route.fullPath 為: {{ route.fullPath }}</p>
+
   <button
     type="button"
     class="btn btn-primary"
@@ -39,17 +53,15 @@ const route = useRoute();
     type="button"
     class="btn btn-dark"
   >Dark</button>
-
   <button
     type="button"
     class="btn btn-link"
   >Link</button>
+  <footer>
+    <h5>
+      前台模板的表尾
+    </h5>
+  </footer>
 </template>
 
-<style scoped lang="scss">
-$primary: blue;
-
-h1 {
-  color: $primary;
-}
-</style>
+<style scoped></style>
